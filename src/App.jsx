@@ -78,8 +78,7 @@ function WindowFrame({ title = "THE CONFESSION", children }) {
 />
         
         {/* HOLOGRAPHIC OVERLAY */}
-{/* <div className="absolute inset-0 opacity-30 pointer-events-none bg-[linear-gradient(...)] animate-[holo_6s_linear_infinite]"></div> */}
-        {/* SCANLINES */}
+<div className="absolute inset-0 opacity-30 pointer-events-none bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent)] animate-[holo_6s_linear_infinite]"></div>        {/* SCANLINES */}
 <div
   className="absolute inset-0 pointer-events-none opacity-10"
   style={{
