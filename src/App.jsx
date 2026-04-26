@@ -59,8 +59,10 @@ function WindowFrame({ title = "THE CONFESSION", children }) {
       </div>
 
       {/* CONTENT */}
-      <div className="p-6 h-[calc(100%-28px)] overflow-hidden flex flex-col justify-center">
-        {children}
+<div
+  className="p-6 overflow-hidden flex flex-col justify-center"
+  style={{ height: "calc(100% - 28px)" }}
+>        {children}
       </div>
     </div>
   );
