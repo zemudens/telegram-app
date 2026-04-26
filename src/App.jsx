@@ -166,9 +166,9 @@ className="
 {page===2 && (
   <div className="text-center space-y-4">
     <img src="/questionmark.png" className="w-40 mx-auto" />
-    <p className="text-xs text-white/50">They say We can’t keep things undefined forever.</p>
+    <p className="text-xs text-white/50">They say We can't keep things undefined forever.</p>
     <h2 className="text-xl font-bold bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">
-      Since 'friends' don't talk like we do. What’s the next move?
+      Since 'friends' don't talk like we do. What's the next move?
     </h2>
   </div>
 )}
@@ -221,7 +221,7 @@ className="
           {/* text */}
           <div className="relative">
             we were a mismatch of frequencies back then. i let go because i didn't know how to stay. 
-            but time proved there’s a gap that only you can fill an "unfinished feeling" i couldn't delete. 
+            but time proved there's a gap that only you can fill an "unfinished feeling" i couldn't delete. 
             it started with just wanting to hear from you, but it ended with me falling all over again. 
             just hoping that "us" in 2026 is the version that finally works. 
             Love should be fun, right?
@@ -257,7 +257,7 @@ className="
 
 <div className="space-y-2 relative z-50">
   <p className="text-xs text-white/60 animate-pulse">
-    “Listen to this, then check your screen.”
+    "Listen to this, then check your screen."
   </p>
 
 <div>
@@ -287,7 +287,7 @@ className="
       <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 animate-[shine_2s_linear_infinite]"></div>
       
       <p className="relative z-10 text-sm leading-relaxed font-medium">
-        “Challenge accepted. I’m trying hard now. Pick up?”
+        "Challenge accepted. I'm trying hard now. Pick up?"
       </p>
       
       <button 
