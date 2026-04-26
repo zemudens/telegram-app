@@ -16,22 +16,19 @@ const toggleAudio = async () => {
   if (!audio) return;
 
   try {
-    audio.muted = false;
-    audio.currentTime = 0; // reset biar pasti kedengeran
-
     if (audio.paused) {
       await audio.play();
+      setPlaying(true);
     } else {
       audio.pause();
+      setPlaying(false);
     }
   } catch (err) {
-    console.log("PLAY ERROR:", err);
-
-    // 🔥 fallback hack (WAJIB untuk Telegram)
     try {
       audio.muted = true;
       await audio.play();
       audio.muted = false;
+      setPlaying(true);
     } catch (e) {
       console.log("TOTAL FAIL:", e);
     }
@@ -62,8 +59,9 @@ function WindowFrame({ title = "THE CONFESSION", children }) {
 <div
   className="p-6 overflow-hidden flex flex-col justify-center"
   style={{ height: "calc(100% - 28px)" }}
->        {children}
-      </div>
+>
+  {children}
+</div>
     </div>
   );
 }
@@ -80,11 +78,15 @@ function WindowFrame({ title = "THE CONFESSION", children }) {
 />
         
         {/* HOLOGRAPHIC OVERLAY */}
-        <div className="absolute inset-0 opacity-30 pointer-events-none bg-[linear-gradient(120deg,rgba(255,0,255,0.2),rgba(0,255,255,0.2),rgba(255,255,255,0.2))] animate-[holo_6s_linear_infinite]"></div>
-
+{/* <div className="absolute inset-0 opacity-30 pointer-events-none bg-[linear-gradient(...)] animate-[holo_6s_linear_infinite]"></div> */}
         {/* SCANLINES */}
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-[repeating-linear-gradient(0deg,transparent,transparent 2px,white 3px)]"></div>
-
+<div
+  className="absolute inset-0 pointer-events-none opacity-10"
+  style={{
+    background:
+      "repeating-linear-gradient(0deg, transparent, transparent 2px, white 3px)"
+  }}
+></div>
         <AnimatePresence mode="wait">
 <motion.div
   key={page}
@@ -203,7 +205,8 @@ className="
       {/* BACKGROUND BLUR */}
 <div className="absolute inset-0 bg-black/40 backdrop-blur-md pointer-events-none" />
 
-{/* CONTENT */}      <motion.div
+{/* CONTENT */}
+<motion.div
         onClick={(e) => e.stopPropagation()} // biar ga nutup pas klik text
         initial={{ scale: 0.7, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
