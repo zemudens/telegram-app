@@ -72,9 +72,9 @@ function WindowFrame({ title = "THE CONFESSION", children }) {
  {/* AUDIO — PINDAH KE SINI */}
 <audio
   ref={audioRef}
-  src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+  src="/song.mp3"
   loop
-  controls
+  className="hidden"
 />
         
         {/* HOLOGRAPHIC OVERLAY */}
