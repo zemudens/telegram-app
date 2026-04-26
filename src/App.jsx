@@ -201,8 +201,9 @@ className="
       className="absolute inset-0 flex items-center justify-center z-40"
     >
       {/* BACKGROUND BLUR */}
-<div className="absolute inset-0 bg-black/40 backdrop-blur-md pointer-events-none" />      {/* CONTENT */}
-      <motion.div
+<div className="absolute inset-0 bg-black/40 backdrop-blur-md pointer-events-none" />
+
+{/* CONTENT */}      <motion.div
         onClick={(e) => e.stopPropagation()} // biar ga nutup pas klik text
         initial={{ scale: 0.7, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
